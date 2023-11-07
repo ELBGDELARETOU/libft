@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 12:35:18 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/07 12:18:10 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/07 14:34:55 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/07 14:51:43 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
-int	ft_isdigit(int c)
+int     ft_memset(char *str, char c, int n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+        int     i;
+
+        i = 0;
+        while (n > 0)
+        {
+                *str = c;
+                n--;
+                str++;
+        }
+        printf("%s", str);
+        return (1);
+}
+
+int     main()
+{
+        char str[] = "ademlopsa";
+        char    c = 'c';
+        printf("%d", ft_memset(str, c, 5));
 }

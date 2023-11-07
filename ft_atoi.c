@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 12:35:18 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/07 12:18:10 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/07 10:55:31 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/07 12:16:54 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_atoi(char *str)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	int	atoi;
+	int	signe;
+
+	signe = 1;
+	atoi = 0;
+	while ((*str == 32) || (*str >= 9 && *str <= 13))
+		str++;
+	while (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			signe = signe * -1;
+		str++;
+		if (*str == '-' || *str == '+')
+			return (0);
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		atoi = (atoi * 10 + (*str - '0'));
+		str++;
+	}
+	return (atoi * signe);
 }

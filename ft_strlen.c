@@ -6,7 +6,7 @@
 /*   By: anaouali <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:19:41 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/06 11:36:29 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:55:10 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,4 @@ int	ft_strlen(char *str)
 		i++;
 	}
 	return (i);
-}
-
-int	main()
-{
-	printf("%d",ft_strlen("adem"));
 }
