@@ -3,32 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:34:55 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/07 14:51:43 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:16:32 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-int     ft_memset(char *str, char c, int n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-        int     i;
+	unsigned char	*str1;
 
-        i = 0;
-        while (n > 0)
-        {
-                *str = c;
-                n--;
-                str++;
-        }
-        printf("%s", str);
-        return (1);
+	str1 = str;
+	while (n > 0)
+	{
+		*str1 = c;
+		n--;
+		str1++;
+	}
+	printf("%s\n", str);
+	return (str);
 }
 
-int     main()
+int	main(void)
 {
-        char str[] = "ademlopsa";
-        char    c = 'c';
-        printf("%d", ft_memset(str, c, 5));
+	char	str[] = "ademlopsa";
+	char	c;
+
+	c = 'c';
+	printf("%s", ft_memset(str, c, 5));
 }

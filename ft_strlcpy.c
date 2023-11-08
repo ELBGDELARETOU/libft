@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:19:57 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/07 14:25:29 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:16:33 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 int	ft_strlcpy(char *dest, char *src, int size)
 {
