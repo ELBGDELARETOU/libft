@@ -12,9 +12,9 @@
 
 #include <stdio.h>
 
-int	ft_bzero(char *str, int n)
+void	ft_bzero(char *str, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (n > 0)
@@ -23,13 +23,22 @@ int	ft_bzero(char *str, int n)
 		n--;
 		i++;
 	}
-	printf("%s", str);
-	return (1);
 }
 
-int	main(void)
-{
-	char	str[] = "ademlopsa";
+//int	main(void)
+//{
+//	char	str[] = "ademlopsa";
 
-	printf("%d", ft_bzero(str, 5));
+//	printf("%d", ft_bzero(str, 6));
+//}
+#include <string.h>
+
+int main() {
+    char str[10] = "Bonjour";
+    ft_bzero(str, 2);
+    
+    // À ce stade, les 6 premiers caractères de la chaîne str sont maintenant des zéros.
+    
+    printf("Chaîne après bzero : %s\n", str);
+    return 0;
 }
