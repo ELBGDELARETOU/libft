@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr2.c                                      :+:      :+:    :+:   */
+/*   ft_strnstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,21 +13,21 @@
 #include <stddef.h>
 #include <stdio.h>
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	c;
 
 	i = 0;
 	c = 0;
-	while (haystack[i])
+	while (haystack[i] && i < len)
 	{
-		if (haystack[i] == needle[c] && len > c)
+		if (haystack[i] == needle[c])
 		{
 			i++;
 			c++;
-			if (c == len)
-				return ((char *)haystack - c - 1);
+			if (needle[c] == '\0')
+				return ((char *)haystack + i - c);
 		}
 		else
 		{
@@ -41,7 +41,7 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 int	main(void)
 {
 	const char haystack[] = "je vous souhaite la bienvenue";
-	const char needle[] = "souhait";
-	size_t len = 3;
-	printf("%s", strnstr(haystack, needle, len));
+	const char needle[] = "vous";
+	size_t len = 30;
+	printf("%s", ft_strnstr(haystack, needle, len));
 }
