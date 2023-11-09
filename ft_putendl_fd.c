@@ -1,44 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:41:04 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/09 15:48:22 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/09 16:44:55 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/09 17:03:49 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned char		*dest1;
-	const unsigned char	*src1 = src;
+	int	c;
 
-	dest1 = dest;
-	if (dest1 < src1)
+	c = 0;
+	while (s[c])
 	{
-		while (n > 0)
-		{
-			*dest1 = *src1;
-			dest1++;
-			src1++;
-			n--;
-		}
+		write(fd, &s[c], 1);
+		c++;
 	}
-	else if (dest1 > src1)
-	{
-		d += n;
-		s += n;
-		while (n > 0)
-		{
-			dest1--;
-			src1--;
-			*dest = *src1;
-			n--;
-		}
-	}
-	return (dest);
+	// s[c] = '\n';
+	write(fd, "\n", 1);
+}
+
+int	main(void)
+{
+	int fd = 1;
+	char s[] = "adem";
+	ft_putendl_fd(s, fd);
 }

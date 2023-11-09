@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:24:10 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 11:31:22 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:47:51 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,4 @@ int	ft_toupper(int c)
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
-}
-
-int	main(void)
-{
-	int c = 'a';
-	printf("%d", c);
-	printf("%d", ft_toupper(c));
 }

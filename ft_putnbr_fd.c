@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:41:04 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/09 15:48:22 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/09 17:04:30 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/09 17:46:50 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char		*dest1;
-	const unsigned char	*src1 = src;
+	char		digi;
+	long int	num;
 
-	dest1 = dest;
-	if (dest1 < src1)
+	num = n;
+	if (num < 0)
 	{
-		while (n > 0)
-		{
-			*dest1 = *src1;
-			dest1++;
-			src1++;
-			n--;
-		}
+		write(fd, "-", 1);
+		num = -num;
 	}
-	else if (dest1 > src1)
-	{
-		d += n;
-		s += n;
-		while (n > 0)
-		{
-			dest1--;
-			src1--;
-			*dest = *src1;
-			n--;
-		}
-	}
-	return (dest);
+	if (num > 9)
+		ft_putnbr_fd(num / 10, fd);
+	digi = num % 10 + '0';
+	write(fd, &digi, 1);
+}
+
+int	main(void)
+{
+	ft_putnbr_fd(-2147483648, 3);
 }

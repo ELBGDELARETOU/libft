@@ -6,15 +6,15 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:25:14 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/09 15:45:53 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:52:07 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*strdup(const char *str)
 {
-	size_t size;
-	size_t i;
-	unsigned char dest;
+	size_t	size;
+	size_t	i;
+	unsigned char	dest;
 
 	i = 0;
 	size = 0;
@@ -29,5 +29,5 @@ char	*strdup(const char *str)
 		size--;
 	}
 	dest[i] = '\0';
-	return (dest)
+	return (dest);
 }
