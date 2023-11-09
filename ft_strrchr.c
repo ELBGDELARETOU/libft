@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:34:55 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 11:50:05 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/08 12:07:08 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/08 12:55:53 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-void	*ft_memset(void *str, int c, size_t n)
+
+#include <stdio.h>
+
+const char	*ft_strrchr(const char *str, int c)
 {
-	unsigned char	*str1;
+	int	i;
 
-	str1 = str;
-	while (n > 0)
+	i = 0;
+	while (str[i])
+		i++;
+	while (i > 0)
 	{
-		*str1 = c;
-		n--;
-		str1++;
+		if (str[i] == c)
+			return (str + i);
+		i--;
 	}
-	printf("%s\n", str);
-	return (str);
+	return (NULL);
 }
-
+/*
 int	main(void)
 {
-	char	str[] = "ademlopsa";
-	char	c;
-
-	c = 'p';
-	printf("%s", ft_memset(str, c, 3));
-}
+	const char str[] = "les copains sont po la";
+	int c = 'o';
+	printf("%s\n", ft_strrchr(str, c));
+}*/

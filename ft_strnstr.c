@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 11:38:09 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 12:06:42 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/08 17:15:10 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/09 11:07:57 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include <stdio.h>
 
-const char	*ft_strchr(const char *str, int c)
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	size_t	i;
+	size_t	c;
 
 	i = 0;
-	while (str[i])
+	c = 0;
+	while (haystack[i])
 	{
-		if (str[i] == c)
-			return (str + i);
-		i++;
+		if (haystack[i] == needle[c] && len > c)
+		{
+			i++;
+			c++;
+			if (c == len)
+				return ((char *)haystack - c - 1);
+		}
+		else
+		{
+			c = 0;
+			i++;
+		}
 	}
 	return (NULL);
 }
-/*
+
 int	main(void)
 {
-	const char str[] = "les copains";
-	int c = ' ';
-	printf("%s\n", ft_strchr(str, c));
-}*/
+	const char haystack[] = "je vous souhaite la bienvenue";
+	const char needle[] = "souhait";
+	size_t len = 3;
+	printf("%s", strnstr(haystack, needle, len));
+}

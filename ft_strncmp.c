@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:34:55 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 11:50:05 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/08 13:02:41 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/08 13:13:46 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-void	*ft_memset(void *str, int c, size_t n)
-{
-	unsigned char	*str1;
 
-	str1 = str;
-	while (n > 0)
+#include <stddef.h>
+#include <stdio.h>
+
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
 	{
-		*str1 = c;
-		n--;
-		str1++;
+		if (str1[i] == str2[i])
+			i++;
+		else
+			return (str1[i] - str2[i]);
 	}
-	printf("%s\n", str);
-	return (str);
+	return (0);
 }
 
 int	main(void)
 {
-	char	str[] = "ademlopsa";
-	char	c;
-
-	c = 'p';
-	printf("%s", ft_memset(str, c, 3));
+	const char str1[] = "adem a le palu";
+	const char str2[] = "adem a pas le palu";
+	printf("%d\n", ft_strncmp(str1, str2, 7));
 }

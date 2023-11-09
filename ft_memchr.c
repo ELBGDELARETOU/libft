@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:34:55 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 11:50:05 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/08 13:14:14 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/08 15:18:54 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-void	*ft_memset(void *str, int c, size_t n)
-{
-	unsigned char	*str1;
 
-	str1 = str;
-	while (n > 0)
+void	*ft_memchr(const void *ptr, int value, size_t n)
+{
+	size_t				i;
+	const unsigned char	*p;
+
+	*p = *ptr i = 0;
+	while (i < n)
 	{
-		*str1 = c;
-		n--;
-		str1++;
+		if (p[i] == value)
+			return (p + i);
+		i++;
 	}
-	printf("%s\n", str);
-	return (str);
+	return (NULL)
 }
 
 int	main(void)
 {
-	char	str[] = "ademlopsa";
-	char	c;
-
-	c = 'p';
-	printf("%s", ft_memset(str, c, 3));
 }
