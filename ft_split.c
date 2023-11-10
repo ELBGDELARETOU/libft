@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 11:19:41 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/10 10:50:12 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/10 12:55:01 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/10 14:29:16 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *str)
+int	ft_is_in_str(char c, char *str)
 {
-	size_t	i;
+	int i;
 
-	i = 0;
-	while (*str)
-	{
-		str++;
-		i++;
-	}
-	return (i);
+	i = -1;
+	while (str[++i])
+		if (c == str[i])
+			return (1);
+	return (0);
 }
