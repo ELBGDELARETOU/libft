@@ -6,11 +6,11 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:19:41 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 11:16:35 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:41:40 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
