@@ -6,10 +6,12 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:34:55 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 11:50:05 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/10 09:55:05 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stddef.h>
+
 void	*ft_memset(void *str, int c, size_t n)
 {
 	unsigned char	*str1;

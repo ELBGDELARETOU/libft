@@ -32,36 +32,25 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 {
 	void	*tab;
 
-	tab = (void *)malloc(num_elements * element_size);
+	tab = (void*)  malloc(num_elements * element_size);
 	if (!tab)
 		return (NULL);
 	ft_bzero(tab, num_elements);
 	return (tab);
 }
-
+/*
 int	main(void)
 {
-	size_t	num_elements;
-	size_t	element_size;
-	size_t	*tab;
+	size_t num_elements = 2;
+	size_t element_size = 2;
+	size_t *tab;
+	int i = 0;
 
-	num_elements = 2;
-	element_size = sizeof(size_t);
 	tab = ft_calloc(num_elements, element_size);
-	if (!tab)
+
+	while (tab[i] > 4)
 	{
-		printf("Allocation de mémoire a échoué.\n");
-		return (1);
+		printf("%d", tab[i]);
+		i++;
 	}
-	// Vous devez initialiser les valeurs du tableau
-	for (size_t i = 0; i < num_elements; i++)
-	{
-		tab[i] = i;
-	}
-	for (size_t i = 0; i < num_elements; i++)
-	{
-		printf("%zu ", tab[i]);
-	}
-	free(tab);
-	return (0);
-}
+}**

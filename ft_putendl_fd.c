@@ -20,7 +20,6 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[c], 1);
 		c++;
 	}
-	// s[c] = '\n';
 	write(fd, "\n", 1);
 }
 
