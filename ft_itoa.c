@@ -1,30 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 12:19:57 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/12 18:17:19 by ademnaouali      ###   ########.fr       */
+/*   Created: 2023/11/12 17:03:47 by ademnaouali       #+#    #+#             */
+/*   Updated: 2023/11/12 17:05:07 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+char *ft_itoa(int n)
 {
-	size_t	c;
-	size_t	i;
-
-	c = 0;
-	i = 0;
-	while (src[i] && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-		c++;
-	}
-	dest[i] = '\0';
-	return (c);
+    
 }
