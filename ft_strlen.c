@@ -6,9 +6,11 @@
 /*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:19:41 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/12 18:17:33 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/12 22:36:08 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
