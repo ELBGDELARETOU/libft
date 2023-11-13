@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:55:01 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/13 10:21:34 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/13 23:59:23 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char	**ft_split(char *str, char c)
 	res[i] = 0;
 	return (res);
 }
-
+/*
 int	main(void)
 {
 	char	**test;
@@ -97,4 +97,4 @@ int	main(void)
 	test = ft_split(str, c);
 	while (test[++i])
 		printf("%s\n", test[i]);
-}
+}*/

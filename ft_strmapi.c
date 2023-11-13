@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:37:32 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/13 15:35:29 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:00:19 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ char	ft_test(unsigned int i, char c)
 		c -= 32;
 	return (c);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
 {
 	char *str = ft_strmapi("jeveuxdesmajuscules", &ft_test);
 	printf("%s", str);
-}
+}*/

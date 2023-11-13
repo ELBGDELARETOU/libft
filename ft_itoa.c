@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:03:47 by ademnaouali       #+#    #+#             */
-/*   Updated: 2023/11/13 14:38:12 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:02:09 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_countlen(int n)
 {
@@ -56,9 +55,9 @@ char	*ft_itoa(int n)
 	res[i] = '\0';
 	return (res);
 }
-
+/*
 int	main(void)
 {
 	int n = -2147483648;
 	printf("%s", ft_itoa(n));
-}
+}*/

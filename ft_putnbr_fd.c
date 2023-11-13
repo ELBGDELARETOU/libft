@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:04:30 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/09 17:46:50 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:02:38 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
+#include "libft.h"
 void	ft_putnbr_fd(int n, int fd)
 {
 	char		digi;

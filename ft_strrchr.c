@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:07:08 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 12:55:53 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:44:59 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 const char	*ft_strrchr(const char *str, int c)
 {
@@ -22,15 +22,14 @@ const char	*ft_strrchr(const char *str, int c)
 	while (i > 0)
 	{
 		if (str[i] == c)
-			return (str + i);
+			return (&str + i);
 		i--;
 	}
 	return (NULL);
 }
-/*
 int	main(void)
 {
 	const char str[] = "les copains sont po la";
 	int c = 'o';
 	printf("%s\n", ft_strrchr(str, c));
-}*/
+}

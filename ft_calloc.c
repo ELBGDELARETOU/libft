@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:10:35 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/13 11:11:30 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:46:24 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_bzero(char *str, int n)
 {
@@ -38,7 +36,6 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 	ft_bzero(tab, num_elements);
 	return (tab);
 }
-
 int	main(void)
 {
 	size_t num_elements = 2;

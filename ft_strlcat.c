@@ -6,7 +6,7 @@
 /*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:01:14 by ademnaouali       #+#    #+#             */
-/*   Updated: 2023/11/12 22:25:57 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/13 23:59:55 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ size_t ft_strlcat(char *dest, const char *src, size_t size)
     printf("%s", dest);
     return (i);
 }
-
+/*
 int main()
 {
     char dest[] = "manu je t";
     char src[] = "aime";
     printf("%d", ft_strlcat(dest, src, 2));
-}
+}*/

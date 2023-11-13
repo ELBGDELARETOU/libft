@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:57:08 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 11:16:50 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:07:53 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(char *str, size_t n)
 {
@@ -31,8 +31,7 @@ void	ft_bzero(char *str, size_t n)
 
 //	printf("%d", ft_bzero(str, 6));
 //}
-#include <string.h>
-
+/*
 int main() {
     char str[10] = "Bonjour";
     ft_bzero(str, 2);
@@ -41,4 +40,4 @@ int main() {
     
     printf("Chaîne après bzero : %s\n", str);
     return 0;
-}
+}*/

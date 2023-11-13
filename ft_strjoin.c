@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:12:10 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/10 10:45:28 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:43:48 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t          ft_strlen(const char *str)
 {
 	int	i;
 
@@ -49,7 +49,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	tab[s] = '\0';
 	return (tab);
 }
-
+/*
 int	main(void)
 {
 	int i;
@@ -64,4 +64,4 @@ int	main(void)
 		printf("%c", tab[i]);
 		i++;
 	}
-}
+}*/

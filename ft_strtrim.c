@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:51:47 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/10 15:43:31 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:00:52 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	tab[k] = '\0';
 	return (tab);
 }
+/*
 int	main(void)
 {
 	char const s1[] = "bonjourbaobabbamboubonjour";
@@ -73,4 +74,4 @@ int	main(void)
 		printf("%c", *tab);
 		tab++;
 	}
-}
+}*/

@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:57:45 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/10 10:08:19 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:03:25 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -32,8 +30,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	tab[i] = '\0';
 	return (tab);
 }
-
+/*
 int	main(void)
 {
 	printf("%s", ft_substr("je vous souhaite la bienvenue", 7, 9));
-}
+}*/

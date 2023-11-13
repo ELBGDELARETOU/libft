@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:14:14 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/08 15:18:54 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/14 00:45:48 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *ptr, int value, size_t n)
 {
@@ -22,9 +24,5 @@ void	*ft_memchr(const void *ptr, int value, size_t n)
 			return (p + i);
 		i++;
 	}
-	return (NULL)
-}
-
-int	main(void)
-{
+	return (NULL);
 }
