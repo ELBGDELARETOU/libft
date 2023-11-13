@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:03:47 by ademnaouali       #+#    #+#             */
-/*   Updated: 2023/11/13 14:35:38 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:38:12 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ int	ft_countlen(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*res;
-	int		i;
-	int		c;
-	int		number;
-    long int lon;
+	char		*res;
+	int			i;
+	int			c;
+	int			number;
+	long int	lon;
 
-    lon = n;
+	lon = n;
 	number = ft_countlen(lon) - 1;
 	c = ft_countlen(lon);
 	i = 0;
