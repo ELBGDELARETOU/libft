@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:10:35 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/10 10:15:35 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:11:30 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 	ft_bzero(tab, num_elements);
 	return (tab);
 }
-/*
+
 int	main(void)
 {
 	size_t num_elements = 2;
-	size_t element_size = 2;
+	size_t element_size = 3;
 	size_t *tab;
 	int i = 0;
 
@@ -53,4 +53,4 @@ int	main(void)
 		printf("%d", tab[i]);
 		i++;
 	}
-}**
+}
