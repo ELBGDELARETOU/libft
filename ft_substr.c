@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:57:45 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 00:03:25 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/14 17:19:22 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (ft_strlen(s) < start || s == NULL)
+		return (NULL);
 	tab = (char *)malloc(len + 1);
 	if (!tab)
 		return (NULL);
-	while (s[start] && len > i)
+	while (s[start] && len > i && ft_isprint((unsigned char)s[start]))
 	{
 		tab[i] = s[start];
 		start++;
