@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:33:39 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 00:02:06 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/14 11:11:02 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 36 && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

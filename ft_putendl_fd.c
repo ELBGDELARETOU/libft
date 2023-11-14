@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 16:44:55 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 00:02:36 by ademnaouali      ###   ########.fr       */
+/*   Created: 2023/11/14 15:53:01 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/14 15:53:05 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	c;
+	int c;
 
 	c = 0;
 	while (s[c])
@@ -23,11 +23,4 @@ void	ft_putendl_fd(char *s, int fd)
 		c++;
 	}
 	write(fd, "\n", 1);
-}
-
-int	main(void)
-{
-	int fd = 1;
-	char s[] = "adem";
-	ft_putendl_fd(s, fd);
 }

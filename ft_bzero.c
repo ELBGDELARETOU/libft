@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:57:08 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 00:07:53 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/14 11:00:43 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 void	ft_bzero(char *str, size_t n)
 {
 	size_t	i;
+	char c;
 
 	i = 0;
+	c = '\0';
 	while (n > 0)
 	{
-		str[i] = '0';
+		str[i] = c;
 		n--;
 		i++;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:26:48 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 00:02:44 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/14 11:28:12 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	ft_putstr_fd(char *s, int fd)
 		c++;
 	}
 }
-
+/*
 int	main(void)
 {
 	int fd = 1;
 	char s[] = "adem";
 	ft_putstr_fd(s, fd);
-}
+}*/

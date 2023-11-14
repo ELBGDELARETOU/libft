@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:10:35 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 00:46:24 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/14 11:43:55 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_bzero(char *str, int n)
+void	ft_bzero(char *str, size_t n)
 {
-	int	i;
+	size_t	i;
+	char c;
 
 	i = 0;
+	c = '\0';
 	while (n > 0)
 	{
-		str[i] = '0';
+		str[i] = c;
 		n--;
 		i++;
 	}
-	return (1);
 }
 
 void	*ft_calloc(size_t num_elements, size_t element_size)
@@ -33,9 +34,10 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 	tab = (void *)malloc(num_elements * element_size);
 	if (!tab)
 		return (NULL);
-	ft_bzero(tab, num_elements);
+	ft_bzero((char*)tab, num_elements * element_size);
 	return (tab);
 }
+/*
 int	main(void)
 {
 	size_t num_elements = 2;
@@ -50,4 +52,4 @@ int	main(void)
 		printf("%d", tab[i]);
 		i++;
 	}
-}
+}*/

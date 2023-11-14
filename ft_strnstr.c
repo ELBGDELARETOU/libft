@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			i++;
 			c++;
-			if (needle[c] == '\0')
+			if (needle[c] == '\0' || haystack[c] == '\0')
 				return ((char *)haystack + i - c);
 		}
 		else
@@ -36,11 +36,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
+
 int	main(void)
 {
-	const char haystack[] = "je vous souhaite la bienvenue";
-	const char needle[] = "vous";
-	size_t len = 30;
+	const char haystack[30] = "";
+	const char needle[10] = "";
+	size_t len = -1;
 	printf("%s", ft_strnstr(haystack, needle, len));
-}*/
+}
