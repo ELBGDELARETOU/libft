@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:10:35 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 11:43:55 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:34:38 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(char *str, size_t n)
 {
 	size_t	i;
-	char c;
+	char	c;
 
 	i = 0;
 	c = '\0';
@@ -31,10 +31,13 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 {
 	void	*tab;
 
+	if (num_elements > 0 && element_size > 0 && (SIZE_MAX
+			/ num_elements) < element_size)
+		return (NULL);
 	tab = (void *)malloc(num_elements * element_size);
 	if (!tab)
 		return (NULL);
-	ft_bzero((char*)tab, num_elements * element_size);
+	ft_bzero((char *)tab, num_elements * element_size);
 	return (tab);
 }
 /*

@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:51:47 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 15:24:32 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/15 14:39:29 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	while (*str)
+	while (str[i])
 	{
-		str++;
 		i++;
 	}
 	return (i);
@@ -46,7 +45,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	k = 0;
 	len = ft_strlen(s1);
 	j = len - 1;
-	while (*s1 && ft_is_in_str(s1[i], set))
+	while (s1[i] && ft_is_in_str(s1[i], set))
 		i++;
 	while (s1[j] && ft_is_in_str(s1[j], set))
 		j--;
@@ -62,11 +61,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	tab[k] = '\0';
 	return (tab);
 }
-/*
+
 int	main(void)
 {
-	char const s1[] = "bonjourbaobabbamboubonjour";
-	char const set[] = "bonjour";
+	char const s1[] = "   xxxtripouille   xxx";
+	char const set[] = " x";
 	char *tab;
 
 	tab = ft_strtrim(s1, set);
@@ -75,4 +74,4 @@ int	main(void)
 		printf("%c", *tab);
 		tab++;
 	}
-}*/
+}

@@ -6,24 +6,40 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:57:45 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 17:19:22 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:13:10 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (*str)
+	{
+		str++;
+		i++;
+	}
+	return (i);
+}
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*tab;
 	size_t	i;
 
 	i = 0;
-	if (ft_strlen(s) < start || s == NULL)
+	if (s == NULL)
 		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	tab = (char *)malloc(len + 1);
 	if (!tab)
 		return (NULL);
-	while (s[start] && len > i && ft_isprint((unsigned char)s[start]))
+	while (s[start] && len > i)
 	{
 		tab[i] = s[start];
 		start++;
@@ -35,5 +51,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int	main(void)
 {
-	printf("%s", ft_substr("je vous souhaite la bienvenue", 7, 9));
+	printf("%s", ft_substr("tripouille", 0, 42000));
 }*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:55:01 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/13 23:59:23 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/15 15:09:11 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char *str, char c)
 	i = -1;
 	j = 0;
 	cw = ft_count_words(str, c);
-	res = malloc(cw * sizeof(char *));
+	res = malloc((cw + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
 	while (++i < cw)
