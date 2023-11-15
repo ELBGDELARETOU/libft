@@ -40,7 +40,8 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 size_t		ft_strlcat(char *dest, const char *src, size_t size);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
-char		**ft_split(char *str, char c);
+char		**ft_split(char const *str, char c);
 void		ft_putendl_fd(char *s, int fd);
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif

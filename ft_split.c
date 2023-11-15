@@ -6,13 +6,25 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:55:01 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/15 15:09:11 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:23:31 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_char_is_in_str(char *str, char c)
+void	my_free_all(char **res, int len)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		free(res[i]);
+		i++;
+	}
+	free(res);
+}
+int	ft_char_is_in_str(char const *str, char c)
 {
 	int	i;
 
@@ -22,7 +34,7 @@ int	ft_char_is_in_str(char *str, char c)
 	return (0);
 }
 
-int	ft_count_words(char *str, char c)
+int	ft_count_words(char const *str, char c)
 {
 	int	i;
 	int	words;
@@ -42,7 +54,7 @@ int	ft_count_words(char *str, char c)
 	return (words);
 }
 
-char	*ft_get_next_words(int *index, char *str, char c)
+char	*ft_get_next_words(int *index, char const *str, char c)
 {
 	int		len;
 	int		i;
@@ -66,7 +78,7 @@ char	*ft_get_next_words(int *index, char *str, char c)
 	return (res);
 }
 
-char	**ft_split(char *str, char c)
+char	**ft_split(char const *str, char c)
 {
 	int		i;
 	int		j;
@@ -80,21 +92,28 @@ char	**ft_split(char *str, char c)
 	if (!res)
 		return (NULL);
 	while (++i < cw)
+	{
 		res[i] = ft_get_next_words(&j, str, c);
-	res[i] = 0;
+		if (res[i] == NULL)
+		{
+			my_free_all(res, i);
+			return (NULL);
+		}
+	}
+	res[i] = NULL;
 	return (res);
 }
-/*
+
 int	main(void)
 {
 	char	**test;
-	char	str[] = "ceci est un test";
+	char	str[] = "tripouille";
 	char	c;
 	int		i;
 
-	c = 't';
+	c = '\0';
 	i = -1;
 	test = ft_split(str, c);
 	while (test[++i])
 		printf("%s\n", test[i]);
-}*/
+}
