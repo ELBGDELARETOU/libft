@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:14:14 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 12:15:47 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:32:00 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	const char *p;
-	char d;
+	size_t		i;
+	const char	*p;
+	char		d;
 
 	d = (char)c;
 	p = s;

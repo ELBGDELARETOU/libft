@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:38:09 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 12:44:36 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:37:52 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
-	char d;
+	int		i;
+	char	d;
 
 	i = 0;
 	d = c;

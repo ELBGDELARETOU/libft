@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:55:01 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/15 18:23:31 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:43:24 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	my_free_all(char **res, int len)
 	}
 	free(res);
 }
+
 int	ft_char_is_in_str(char const *str, char c)
 {
 	int	i;
@@ -43,14 +44,16 @@ int	ft_count_words(char const *str, char c)
 	i = 0;
 	while (str[i])
 	{
-		if (!ft_char_is_in_str(&str[i], c))
+		if (str[i] != c && str[i])
 		{
 			words++;
-			while (!ft_char_is_in_str(&str[i], c) && str[i])
+			while (str[i] != c && str[i] && str[i])
 				i++;
 		}
-		i++;
+		else
+			i++;
 	}
+	printf("%d\n", words);
 	return (words);
 }
 
@@ -72,7 +75,8 @@ char	*ft_get_next_words(int *index, char const *str, char c)
 	while (++i < len)
 	{
 		res[i] = str[*index];
-		*index = *index + 1;
+		*index += 1
+		;
 	}
 	res[i] = 0;
 	return (res);
@@ -97,6 +101,7 @@ char	**ft_split(char const *str, char c)
 		if (res[i] == NULL)
 		{
 			my_free_all(res, i);
+			free(res);
 			return (NULL);
 		}
 	}
@@ -104,16 +109,16 @@ char	**ft_split(char const *str, char c)
 	return (res);
 }
 
-int	main(void)
-{
-	char	**test;
-	char	str[] = "tripouille";
-	char	c;
-	int		i;
+// int	main(void)
+// {
+// 	char	**test;
+// 	char	str[] = "je n y arrive pas";
+// 	char	c;
+// 	int		i;
 
-	c = '\0';
-	i = -1;
-	test = ft_split(str, c);
-	while (test[++i])
-		printf("%s\n", test[i]);
-}
+// 	c = ' ';
+// 	i = -1;
+// 	test = ft_split(str, c);
+// 	while (test[++i])
+// 		printf("%s\n", test[i]);
+// }

@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:51:47 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/15 18:57:55 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:32:12 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,28 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+char	*ft_strdup(const char *str)
+{
+	size_t	size;
+	size_t	i;
+	char	*dest;
+
+	i = 0;
+	size = ft_strlen(str);
+	dest = (char *)malloc(size + 1);
+	if (!dest)
+		return (NULL);
+	while (size > 0)
+	{
+		dest[i] = str[i];
+		i++;
+		size--;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
 size_t	ft_is_in_str(char c, const char *str)
 {
 	size_t	i;
@@ -34,6 +56,7 @@ size_t	ft_is_in_str(char c, const char *str)
 	}
 	return (0);
 }
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*tab;
@@ -46,28 +69,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 	k = 0;
 	len = ft_strlen(s1);
 	j = len - 1;
-	while (s1[j] && ft_is_in_str(s1[j], set) && j > 0)
-		j--;
 	while (s1[i] && ft_is_in_str(s1[i], set))
 		i++;
-	if ((i + j) == len)
-		return (tab);
-	tab = (char *)malloc((j - i) + 1);
+	if (i == len)
+		return (ft_strdup(""));
+	while (s1[j] && ft_is_in_str(s1[j], set) && j > 0)
+		j--;
+	tab = (char *)malloc((j - i) + 2);
 	if (!tab)
 		return (NULL);
 	while (i <= j)
-	{
-		tab[k] = s1[i];
-		i++;
-		k++;
-	}
+		tab[k++] = s1[i++];
 	tab[k] = '\0';
 	return (tab);
 }
-
+/*
 int	main(void)
 {
-	char const s1[] = "   xxx   xxx";
+	char const s1[] = "   xxx  ex xxx";
 	char const set[] = " x";
 	char *tab;
 	int i = 0;
@@ -77,4 +96,4 @@ int	main(void)
 		printf("%c", tab[i]);
 		i++;
 	}
-}
+}*/

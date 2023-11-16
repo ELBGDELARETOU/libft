@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:53:01 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 15:53:05 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:33:34 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	while (s[c])

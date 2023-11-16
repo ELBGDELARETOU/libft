@@ -6,13 +6,13 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 11:01:54 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/15 17:34:27 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:33:13 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = -1;
 	while (s[++i])

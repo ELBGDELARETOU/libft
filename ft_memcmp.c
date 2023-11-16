@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:40:12 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 14:54:42 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:36:50 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	s1bis = s1;
 	s2bis = s2;
 	i = 0;
-    k = 0;
+	k = 0;
 	while (i < n)
 	{
 		c = s2bis[i] - s1bis[i];
