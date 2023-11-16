@@ -45,7 +45,6 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar	rc	$@	$^
 	ranlib	$@
-
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 

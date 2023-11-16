@@ -6,7 +6,7 @@
 #    By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 11:15:07 by anaouali          #+#    #+#              #
-#    Updated: 2023/11/16 11:19:29 by anaouali         ###   ########.fr        #
+#    Updated: 2023/11/16 18:43:18 by anaouali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,6 @@
 t_list *ft_lstlast(t_list *lst)
 {
     while(lst && lst-> next)
-        lit = lst->next;
+        lst = lst->next;
     return (lst);
 }
