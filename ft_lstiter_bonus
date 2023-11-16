@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter_bonus                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:48:17 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 15:54:27 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 20:45:08 by ademnaouali      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
+    if (!f)
+        return;
     while(lst)
     {
         f(lst->content);
