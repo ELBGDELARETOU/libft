@@ -6,44 +6,13 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:51:47 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 15:32:12 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:30:34 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(const char *str)
-{
-	size_t	size;
-	size_t	i;
-	char	*dest;
-
-	i = 0;
-	size = ft_strlen(str);
-	dest = (char *)malloc(size + 1);
-	if (!dest)
-		return (NULL);
-	while (size > 0)
-	{
-		dest[i] = str[i];
-		i++;
-		size--;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-size_t	ft_is_in_str(char c, const char *str)
+static size_t	ft_is_in_str(char c, const char *str)
 {
 	size_t	i;
 

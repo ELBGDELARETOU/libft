@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:37:32 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/15 17:16:53 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:23:03 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (res);
 }
 
-char	ft_test(unsigned int i, char c)
-{
-	if (i % 2 == 0)
-		c -= 32;
-	return (c);
-}
+// char	ft_test(unsigned int i, char c)
+// {
+// 	if (i % 2 == 0)
+// 		c -= 32;
+// 	return (c);
+// }
 /*
 #include <stdio.h>
 

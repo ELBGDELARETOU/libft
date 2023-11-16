@@ -6,26 +6,11 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:10:35 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/15 11:34:38 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:32:28 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_bzero(char *str, size_t n)
-{
-	size_t	i;
-	char	c;
-
-	i = 0;
-	c = '\0';
-	while (n > 0)
-	{
-		str[i] = c;
-		n--;
-		i++;
-	}
-}
 
 void	*ft_calloc(size_t num_elements, size_t element_size)
 {

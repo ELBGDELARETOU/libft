@@ -6,13 +6,13 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 17:03:47 by ademnaouali       #+#    #+#             */
-/*   Updated: 2023/11/15 16:24:52 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:32:13 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countlen(int n)
+static int	ft_countlen(int n)
 {
 	int	i;
 

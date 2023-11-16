@@ -6,24 +6,11 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:25:14 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 12:56:11 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:31:14 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (*str)
-	{
-		str++;
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strdup(const char *str)
 {

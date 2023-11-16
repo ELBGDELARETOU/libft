@@ -6,13 +6,13 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:55:01 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 14:43:24 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:31:46 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	my_free_all(char **res, int len)
+static void	my_free_all(char **res, int len)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ void	my_free_all(char **res, int len)
 	free(res);
 }
 
-int	ft_char_is_in_str(char const *str, char c)
+static int	ft_char_is_in_str(char const *str, char c)
 {
 	int	i;
 
@@ -35,7 +35,7 @@ int	ft_char_is_in_str(char const *str, char c)
 	return (0);
 }
 
-int	ft_count_words(char const *str, char c)
+static int	ft_count_words(char const *str, char c)
 {
 	int	i;
 	int	words;
@@ -57,7 +57,7 @@ int	ft_count_words(char const *str, char c)
 	return (words);
 }
 
-char	*ft_get_next_words(int *index, char const *str, char c)
+static char	*ft_get_next_words(int *index, char const *str, char c)
 {
 	int		len;
 	int		i;
