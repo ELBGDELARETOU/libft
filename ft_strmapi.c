@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:37:32 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 18:23:03 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:35:17 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*res;
 
 	i = 0;
+	if (!s)
+		return(NULL);
 	res = (char *)malloc(ft_strlen(s) + 1);
 	if (!res)
 		return (NULL);

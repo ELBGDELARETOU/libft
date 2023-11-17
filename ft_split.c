@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:55:01 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 18:31:46 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:40:20 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,7 @@ static char	*ft_get_next_words(int *index, char const *str, char c)
 	while (++i < len)
 	{
 		res[i] = str[*index];
-		*index += 1
-		;
+		*index += 1;
 	}
 	res[i] = 0;
 	return (res);
@@ -91,6 +90,8 @@ char	**ft_split(char const *str, char c)
 
 	i = -1;
 	j = 0;
+	if(!str)
+		return(NULL);
 	cw = ft_count_words(str, c);
 	res = malloc((cw + 1) * sizeof(char *));
 	if (!res)

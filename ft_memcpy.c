@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ademnaouali <ademnaouali@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:50:59 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/14 00:02:19 by ademnaouali      ###   ########.fr       */
+/*   Updated: 2023/11/17 15:19:56 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	src1 = src;
 	dest1 = dest;
+	if (!dest && !src)
+		return(NULL);		
 	while (n > 0)
 	{
 		*dest1 = *src1;

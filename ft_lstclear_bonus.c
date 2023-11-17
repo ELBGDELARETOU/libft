@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 16:26:48 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/17 15:36:32 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/16 11:39:37 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/17 15:38:14 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	c;
+	t_list *current;
+	t_list *next;
 
-	c = 0;
-	if (!s)
+	if (!lst || !del)
 		return ;
-	while (s[c])
+	current = *lst;
+	while (current)
 	{
-		write(fd, &s[c], 1);
-		c++;
+		next = current->next;
+		del(current->content);
+		free(current);
+		current = next;
 	}
+	*lst = NULL;
 }
-/*
-int	main(void)
-{
-	int fd = 1;
-	char s[] = "adem";
-	ft_putstr_fd(s, fd);
-}*/

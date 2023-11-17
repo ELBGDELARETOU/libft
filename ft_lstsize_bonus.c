@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 16:26:48 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/17 15:36:32 by anaouali         ###   ########.fr       */
+/*   Created: 2023/11/16 11:10:42 by anaouali          #+#    #+#             */
+/*   Updated: 2023/11/17 12:46:30 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	int	c;
+	int i;
 
-	c = 0;
-	if (!s)
-		return ;
-	while (s[c])
+	i = 0;
+	while (lst)
 	{
-		write(fd, &s[c], 1);
-		c++;
+		lst = lst->next;
+		i++;
 	}
+	return (i);
 }
-/*
-int	main(void)
-{
-	int fd = 1;
-	char s[] = "adem";
-	ft_putstr_fd(s, fd);
-}*/

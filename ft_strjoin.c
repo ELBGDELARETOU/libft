@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:12:10 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 18:31:06 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:42:48 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	s = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	tab = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!tab)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:51:47 by anaouali          #+#    #+#             */
-/*   Updated: 2023/11/16 18:30:34 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:43:36 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	k = 0;
+	if (!s1 || !set)
+		return (NULL);
 	len = ft_strlen(s1);
 	j = len - 1;
 	while (s1[i] && ft_is_in_str(s1[i], set))
