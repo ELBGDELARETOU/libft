@@ -49,7 +49,7 @@ OBJS = $(SRCS:.c=.o)
 
 OBJSBONUS = $(SRCSBONUS:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
@@ -57,7 +57,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar	rcs	$(NAME) $(OBJS)
 	
-%.o: %.c
+.o: .c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

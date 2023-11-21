@@ -6,7 +6,7 @@
 /*   By: anaouali <anaouali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:01:14 by ademnaouali       #+#    #+#             */
-/*   Updated: 2023/11/17 15:22:47 by anaouali         ###   ########.fr       */
+/*   Updated: 2023/11/21 16:42:34 by anaouali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	i = 0;
 	c = 0;
 	k = 0;
-	if (!size)
-		return (0);
+	//if (!size)
+	//	return (0);
 	while (dest[i])
 		i++;
 	while (src[k])
